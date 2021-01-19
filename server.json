@@ -7,9 +7,9 @@
 	"builders": [{
         "type": "azure-arm",
 
-        "client_id": "d7777a59-33e1-4a48-a036-0668eff7f69a",
-        "client_secret": "ydtP16L6BqRQ9VC.W9z4Q3o4vV~MsBhG9_",
-        "subscription_id": "d2cac56e-5263-4149-8d9d-964cf5cd8ed5",
+        "client_id": "XXX",
+        "client_secret": "XXX",
+        "subscription_id": "XXX",
 
         "managed_image_resource_group_name": "udacity-deploy-rg",
         "managed_image_name": "Ubuntu-Image",
