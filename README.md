@@ -17,8 +17,13 @@ To support this need and minimize future work, we will use Packer to create a se
 ## Instructions
 
 ### To allow login for Packer and Terraform we need to create a service principal in Azure
-    Create service principal for Terraform and Packer Create service Principal
+    Create service principal for Terraform and Packer [Create service Principal](https://www.terraform.io/docs/providers/azurerm/guides/service_principal_client_secret.html)
 
 ### Deploy the packer image
+    Add your service principal data to the following lines in the server.jsoon file:
+    
+    "client_id": "",
+    "client_secret": "",
+     subscription_id": "",
 
 ### Create resources with Terraform
