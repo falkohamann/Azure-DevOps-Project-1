@@ -36,7 +36,7 @@ resource "azurerm_subnet" "subnet" {
 }
 #Create NSG
 resource "azurerm_network_security_group" "nsg" {
-  name                = "${var.prefix}-nsg"
+  name                = "${var.prefix}-sg"
   location            = azurerm_resource_group.resource-group.location
   resource_group_name = azurerm_resource_group.resource-group.name
 
@@ -45,23 +45,27 @@ resource "azurerm_network_security_group" "nsg" {
     }
 
   security_rule {
-    name                       = "deny access from internet"
+    name                       = "deny-internet"
     priority                   = 100
     direction                  = "Inbound"
     access                     = "Deny"
     protocol                   = "Tcp"
     source_address_prefix      = "Internet"
     destination_address_prefix = "VirtualNetwork"
+    source_port_range           = "*"
+    destination_port_range      = "*"
   }
 
   security_rule {
-    name                       = "allow inbound traffic from vnet"
+    name                       = "allow-vnet"
     priority                   = 200
     direction                  = "Inbound"
     access                     = "Allow"
     protocol                   = "Tcp"
     source_address_prefix      = "VirtualNetwork"
     destination_address_prefix = "VirtualNetwork"
+    source_port_range           = "*"
+    destination_port_range      = "*"
   }
 }
   #Create a NIC
@@ -141,7 +145,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   resource_group_name             = azurerm_resource_group.resource-group.name
   size                            = "Standard_B1ls"
   admin_username                  = "azure-admin"
-  admin_password                  = "udacity_deploy"
+  admin_password                  = "Udacity123"
   disable_password_authentication = false
   network_interface_ids = [
     azurerm_network_interface.nic[count.index].id

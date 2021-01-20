@@ -39,5 +39,7 @@ variable "vm-name" {
 #OS Image Name provided by packer
 variable "os-image" {
   description = "main name for vms"
-  default     = "/subscriptions/d2cac56e-5263-4149-8d9d-964cf5cd8ed5/resourceGroups/udacity-deploy-rg/providers/Microsoft.Compute/images/Ubuntu-Image"
+  default     = "/subscriptions/d2cac56e-5263-4149-8d9d-964cf5cd8ed5/resourceGroups/deploy-rg/providers/Microsoft.Compute/images/Ubuntu-Image"
+  #"/subscriptions/d2cac56e-5263-4149-8d9d-964cf5cd8ed5/resourceGroups/deploy-rg/providers/Microsoft.Compute/images/Ubuntu-Image"
+  #"/subscriptions/d2cac56e-5263-4149-8d9d-964cf5cd8ed5/resourceGroups/udacity-deploy-rg/providers/Microsoft.Compute/images/Ubuntu-Image"
 }
