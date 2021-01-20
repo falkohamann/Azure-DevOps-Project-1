@@ -54,3 +54,4 @@ To support this need and minimize future work, we will use Packer to create a se
     
         terraform plan
         terraform apply
+## Expected Output
