@@ -123,7 +123,7 @@ resource "azurerm_network_security_group" "nsg" {
   count = var.vm-count
   
   network_interface_id    = element(azurerm_network_interface.nic.*.id, count.index)
-  ip_configuration_name   = "${var.prefix}-backend-addr-pool-association"
+  ip_configuration_name   = "internal"
   backend_address_pool_id = azurerm_lb_backend_address_pool.lb-backend-addr-pool.id
 
 }
