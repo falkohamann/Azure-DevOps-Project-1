@@ -36,3 +36,16 @@ To support this need and minimize future work, we will use Packer to create a se
         packer build server.json
 
 ### Create resources with Terraform
+    
+    Update the vars.tf variable file to configure terraform
+    
+    Create a file terraform.tfvars with secret information
+    
+        # Azure Subscription Id
+        azure-subscription-id = "XXX"
+        # Azure Client Id/appId
+        azure-client-id = "XXX"
+        # Azure Client Secret/password
+        azure-client-secret = "XXX"
+        # Azure Tenant Id
+        azure-tenant-id = "XXX"
