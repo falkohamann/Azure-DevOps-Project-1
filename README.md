@@ -49,3 +49,8 @@ To support this need and minimize future work, we will use Packer to create a se
         azure-client-secret = "XXX"
         # Azure Tenant Id
         azure-tenant-id = "XXX"
+        
+    Run Terraform to create the ressources
+    
+        terraform plan
+        terraform apply
