@@ -20,6 +20,8 @@ To support this need and minimize future work, we will use Packer to create a se
 
     Create service principal for Terraform and Packer 
 
+### Create a Resource group in Azure
+
 ### Deploy the packer image
     Add your service principal data to the following lines in the server.jsoon file:
     
