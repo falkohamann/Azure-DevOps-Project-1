@@ -30,5 +30,9 @@ To support this need and minimize future work, we will use Packer to create a se
     "client_id": "",
     "client_secret": "",
      subscription_id": "",
+     
+     Run Packer
+        
+        packer build server.json
 
 ### Create resources with Terraform
